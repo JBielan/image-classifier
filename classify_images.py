@@ -22,6 +22,7 @@
 ##
 # Imports classifier function for using CNN to classify images
 from classifier import classifier
+import os
 
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function.
@@ -29,7 +30,7 @@ from classifier import classifier
 #       results_dic dictionary that is passed into the function is a mutable
 #       data type so no return is needed.
 #
-def classify_images(images_dir, results_dic, model):
+def classify_images(images_dir = r"pet_images/", results_dic = None, model = 'resnet'):
     """
     Creates classifier labels with classifier function, compares pet labels to
     the classifier labels, and adds the classifier label and the comparison of
@@ -66,10 +67,8 @@ def classify_images(images_dir, results_dic, model):
            None - results_dic is mutable data type so no return needed.
     """
     for key in results_dic:
-        results_dic[key].append(classifier('pet_images/' + key, 'resnet').lower())
+        results_dic[key].append(classifier(os.path.join(images_dir, key), model).lower())
         if results_dic[key][0] in results_dic[key][1]:
             results_dic[key].append('1')
         else:
             results_dic[key].append('0')
-
-    print(results_dic)
