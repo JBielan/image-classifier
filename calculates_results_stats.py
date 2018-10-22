@@ -92,7 +92,7 @@ def calculates_results_stats(results_dic):
     # calculating n_match
     n_match = 0
     for key in results_dic:
-        if results_dic[key][0] == 1:
+        if results_dic[key][2] == 1:
             n_match += 1
     results_stats_dic['n_match'] = n_match
 
