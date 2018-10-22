@@ -69,6 +69,6 @@ def classify_images(images_dir = r"pet_images/", results_dic = None, model = 're
     for key in results_dic:
         results_dic[key].append(classifier(os.path.join(images_dir, key), model).lower())
         if results_dic[key][0] in results_dic[key][1]:
-            results_dic[key].append('1')
+            results_dic[key].append(1)
         else:
-            results_dic[key].append('0')
+            results_dic[key].append(0)
