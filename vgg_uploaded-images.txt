@@ -1,0 +1,51 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:              coffee_mug_01.jpg  label:                 coffee mug
+ 2 key:                 meerkat_01.jpg  label:                    meerkat
+ 3 key:           staffordshire_01.jpg  label:              staffordshire
+ 4 key:           staffordshire_02.jpg  label:              staffordshire
+
+     MATCH:
+
+                meerkat_01.jpg: 
+Real:                    meerkat   Classifier:               meerkat, mierkat
+
+          staffordshire_01.jpg: 
+Real:              staffordshire   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+          staffordshire_02.jpg: 
+Real:              staffordshire   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+ NOT A MATCH:
+
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                       espresso
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+                meerkat_01.jpg: 
+Real:                    meerkat   Classifier:               meerkat, mierkat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+          staffordshire_01.jpg: 
+Real:              staffordshire   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+          staffordshire_02.jpg: 
+Real:              staffordshire   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                       espresso  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1

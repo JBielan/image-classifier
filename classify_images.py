@@ -67,7 +67,7 @@ def classify_images(images_dir = r"pet_images/", results_dic = None, model = 're
            None - results_dic is mutable data type so no return needed.
     """
     for key in results_dic:
-        results_dic[key].append(classifier(os.path.join(images_dir, key), model).lower())
+        results_dic[key].append(classifier(os.path.join(images_dir, key), model).lower().strip())
         if results_dic[key][0] in results_dic[key][1]:
             results_dic[key].append(1)
         else:
