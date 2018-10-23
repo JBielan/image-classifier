@@ -120,16 +120,28 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_correct_breed'] = n_correct_breed
 
     # calculating pct_match
-    results_stats_dic['pct_match'] = (n_match / n_images)*100
+    try:
+        results_stats_dic['pct_match'] = (n_match / n_images)*100
+    except:
+        print('It looks like there\'s no files!')
 
     #calculating pct_correct_dog
-    results_stats_dic['pct_correct_dogs'] = (n_correct_dogs / n_dogs_img)*100
+    try:
+        results_stats_dic['pct_correct_dogs'] = (n_correct_dogs / n_dogs_img)*100
+    except:
+        print('It looks like there\'s no dogs!')
 
     #calculating pct_correct_breed
-    results_stats_dic['pct_correct_breed'] = (n_correct_breed / n_dogs_img)*100
+    try:
+        results_stats_dic['pct_correct_breed'] = (n_correct_breed / n_dogs_img)*100
+    except:
+        print('It looks like there\'s no dogs!')
 
     #calculating pct_correct_notdogs
-    results_stats_dic['pct_correct_notdogs'] = (n_correct_notdogs / n_notdogs_img)*100
+    try:
+        results_stats_dic['pct_correct_notdogs'] = (n_correct_notdogs / n_notdogs_img)*100
+    except:
+        print('It looks like there are only dogs!')
 
 
 
